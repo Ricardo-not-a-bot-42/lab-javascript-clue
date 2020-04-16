@@ -95,16 +95,11 @@ const weaponsArray = [
 
 // ITERATION 2
 
-let randomSelection = (min, max) => {
-  
-}
-
 let selectRandom = (cardStack) => {
   let random = Math.random();
   if(cardStack.length === 0){
     return undefined;
   }
-  console.log(cardStack[Math.floor(random * (cardStack.length))]);
   return cardStack[Math.floor(random * (cardStack.length))];
 }
 
@@ -114,13 +109,11 @@ let pickMystery = () => {
     weapon: selectRandom(weaponsArray),
     room: selectRandom(roomsArray),
   };
-  console.log(mystery);
   return mystery;
 }
 
 // ITERATION 3
 
 let revealMystery = (envelope) => {
-  console.log(`${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`);
   return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`;
 }
